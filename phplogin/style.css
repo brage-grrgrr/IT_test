@@ -16,3 +16,8 @@
     overflow: hidden;
     background-color: #333;
   }
+    
+/*endrer img til usynlig så man ikke kan se veggeb til bildet*/
+.imgbox {
+  visibility: hidden;
+}
