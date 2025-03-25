@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION['bruker_id'])) {
+    header("Location: login.php");
+    exit();
+}
+echo "Color stored in session: " . $_SESSION['color']; // Debugging output
+$color = isset($_SESSION['color']) ? $_SESSION['color'] : '#FFFFFF';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -5,6 +20,11 @@
     <title>rasputin</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+body {
+    background-color: <?php echo htmlspecialchars($color); ?>;
+}
+</style>
 <body>
     <h1>Jukse ark</h1>
     <div class="topnav">
