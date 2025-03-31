@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     
     if ($result->num_rows > 0) {
-        echo "Det finnes allerede en bruker med dette navnet";
+        echo "Det finnes allerede en bruker med dette navnet" . $con->error;
     } else {
         // hvis det fungerer så vil den nye brukeren bli insertet inn i databasen
         $sql = "INSERT INTO accounts (username, password, email) VALUES ('$username', '$password', '$email')";
