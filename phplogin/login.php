@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Hent data fra skjemaet
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $idk = $_POST['idk'];
+    $email = $_POST['email'];
     // Sjekk om brukeren finnes i databasen
     $sql = "SELECT * FROM accounts WHERE username = '$username'";
     $result = $con->query($sql);
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Feil username eller password.";
         }
     } else {
-        echo "Feil username eller password.";
+        echo "Feil username ellerr password.";
     }
 
     $con->close();
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form action="login.php" method="POST">
         <input type="text" name="username" placeholder="username" required>
         <input type="password" name="password" placeholder="password" required>
-        <input type="idk" name="idk" placeholder="idk" required>
+        <input type="text" name="email" placeholder="email" required>
         <button type="submit">Logg inn</button>
     </form>
 </body>
