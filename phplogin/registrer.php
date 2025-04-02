@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Change this to your connection info.
+    
     $host = 'localhost';
     $user = 'brage';
     $pass = 'drlig7i0';
     $db = 'Login_side';
-    // Try and connect using the info above.
+
     $con = mysqli_connect($host, $user, $pass, $db);
     
     // Sjekk tilkobling

@@ -21,3 +21,14 @@
 .imgbox {
   visibility: hidden;
 }
+
+  .simplebox {
+    color: blue;
+    background-color: lightgrey;
+    width: 100px;
+    border: 15px solid rgb(53, 97, 53);
+    padding: 50px;
+    margin: 20px;
+    display: block;  /* Ensure it's displayed */
+  }
+  
